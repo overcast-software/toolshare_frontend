@@ -1,0 +1,80 @@
+{
+  "total": 2,
+  "rows": [
+    {
+      "id": 2596,
+      "name": "Ultrasharp U2415",
+      "asset_tag": "118086895",
+      "serial": "514feaac-0b0e-3d95-8930-b0d3d24867a6",
+      "model": {
+        "id": 18,
+        "name": "Ultrasharp U2415"
+      },
+      "model_number": "6011425921534031",
+      "status_label": {
+        "id": 1,
+        "name": "Ready to Deploy",
+        "status_type": "deployable",
+        "status_meta": "deployable"
+      },
+      "category": {
+        "id": 5,
+        "name": "Displays"
+      },
+      "manufacturer": {
+        "id": 3,
+        "name": "Dell"
+      },
+      "notes": "Created by DB seeder",
+      "order_number": "8301956",
+      "location": {
+        "id": 3,
+        "name": "West Alize"
+      },
+      "image": "https://develop.snipeitapp.com/uploads/models/ultrasharp.jpg",
+      "assigned_to": null,
+      "created_at": "2025-08-02T14:43:03",
+      "purchase_date": "2025-04-26",
+      "purchase_cost": 1243.96
+    },
+    {
+      "id": 2597,
+      "name": "Ultrasharp U2415",
+      "asset_tag": "84043242",
+      "serial": "89ea8289-f598-37cd-ab35-4c8cd56d3a5b",
+      "model": {
+        "id": 18,
+        "name": "Ultrasharp U2415"
+      },
+      "model_number": "6011425921534031",
+      "status_label": {
+        "id": 1,
+        "name": "Ready to Deploy",
+        "status_type": "deployable",
+        "status_meta": "deployed"
+      },
+      "category": {
+        "id": 5,
+        "name": "Displays"
+      },
+      "manufacturer": {
+        "id": 3,
+        "name": "Dell"
+      },
+      "notes": "Created by DB seeder",
+      "order_number": "16806077",
+      "location": {
+        "id": 3,
+        "name": "West Alize"
+      },
+      "image": "https://develop.snipeitapp.com/uploads/models/ultrasharp.jpg",
+      "assigned_to": {
+        "id": 41,
+        "name": "Priscilla Erdman"
+      },
+      "created_at": "2025-08-02T14:43:03",
+      "purchase_date": "2025-02-10",
+      "purchase_cost": 2192.31
+    }
+  ]
+}

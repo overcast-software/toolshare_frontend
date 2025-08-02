@@ -1,56 +1,98 @@
-# tool-share
+# Project Planning Document
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Project Overview
 
-## Prerequisites
+- Create an ember frontend to consume Snipe-IT's API
 
-You will need the following things properly installed on your computer.
+### Project Name:
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (with npm)
-- [Ember CLI](https://cli.emberjs.com/release/)
-- [Google Chrome](https://google.com/chrome/)
+ToolShare
 
-## Installation
+### Project Summary:
 
-- `git clone <repository-url>` this repository
-- `cd tool-share`
-- `npm install`
+The project aims to develop a new front end using Ember.js to consume Snipe-IT's API. It will augment the ability for members of the site to borrow home and gardening tools from each other.
 
-## Running / Development
+### Mandatory Rules
 
-- `npm run start`
-- Visit your app at [http://localhost:4200](http://localhost:4200).
-- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+- Always refer to ./Convention.md and adhere to the rules.
 
-### Code Generators
+### Goals and Objectives:
 
-Make use of the many generators for code, try `ember help generate` for more details
+Build a responsive and user-friendly interface that mimic masonry CSS.
+Efficiently integrate with Snipe-IT's API to manage asset inventories.
+Augment the API with additional feature that allows users to borrow inventory from other users
 
-### Running Tests
+## Requirements
 
-- `npm run test`
-- `npm run test:ember -- --server`
+### Functional Requirements:
 
-### Linting
+Develop an Ember.js frontend capable of consuming Snipe-IT's API.
+Implement features:
 
-- `npm run lint`
-- `npm run lint:fix`
+- [ ] User authentication system integrated with Snipe-IT.
+- [ ]check-in/check-out
+- [ ] reporting.
 
-### Building
+### Non-Functional Requirements:
 
-- `npm exec ember build` (development)
-- `npm run build` (production)
+Performance should ensure fast loading times and smooth user interaction.
+The application should be scalable and secure.
+Ensure compatibility across major web browsers.
 
-### Deploying
+## Scope
 
-Specify what it takes to deploy your app.
+### In-Scope:
 
-## Further Reading / Useful Links
+Development of a new Ember.js frontend.
+Integration with Snipe-IT's API.
+UI/UX design improvements.
 
-- [ember.js](https://emberjs.com/)
-- [ember-cli](https://cli.emberjs.com/release/)
-- Development Browser Extensions
-  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+### Out-of-Scope:
+
+Modifications to Snipe-IT's backend codebase.
+Mobile app development in this phase.
+
+## Implementation Plan
+
+### Development Strategy:
+
+Follow Agile methodology to allow for iterative feedback and improvements.
+Utilize Ember.js best practices and design patterns.
+Use information about the api at api_reference.md or on the web at https://snipe-it.readme.io/reference/api-overview
+Use the mock api convention in convention.md to
+
+### Deployment Strategy:
+
+Utilize Terraform and ArgoCD.
+Establish rollback plans in case of deployment issues.
+
+## Documentation and Training
+
+### User Documentation:
+
+Create comprehensive user manuals and interface guides.
+
+### Training Plan:
+
+Conduct training sessions for existing users to familiarize them with the new interface.
+
+### Appendices
+
+Include API documentation and technical specifications.
+Prototype design sketches and wireframes.
+
+## Process
+
+### process1: Create necessary files
+
+- [ ] create "hardware" page at root path
+  - [ ] create hardware model using cli
+  - [ ] create stubbed api response in /api/ assets/hardware.json
+  - [ ] create route to hardware
+  - [ ] create serializer for hardware response
+
+#### process2: Follow-up
+
+##### sub1: Refactor UserController.php
+
+- [ ] Refactor the code.

@@ -1,7 +1,12 @@
 {{page-title "ToolShare"}}
 
-{{outlet}}
+<header class="app-header">
+  <h1>ToolShare - Hardware Inventory</h1>
+  <p>Borrow and share tools with your community</p>
+</header>
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+<main class="app-main">
+  <HardwareList />
+</main>
+
+{{outlet}}
