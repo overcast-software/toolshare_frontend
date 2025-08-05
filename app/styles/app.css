@@ -20,6 +20,7 @@ body {
   text-align: center;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .app-header h1 {
@@ -33,6 +34,35 @@ body {
   color: #666;
   margin: 0;
   font-size: 1.1rem;
+}
+
+.app-header .user-info {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-header .user-name {
+  color: #333;
+  font-weight: 600;
+}
+
+.app-header .logout-button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.app-header .logout-button:hover {
+  background: #c82333;
 }
 
 /* Main Content */
