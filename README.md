@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-- Create an ember frontend to consume Snipe-IT's API
+- Create an ember frontend to consume Homebox API
 
 ### Project Name:
 
@@ -10,7 +10,7 @@ ToolShare
 
 ### Project Summary:
 
-The project aims to develop a new front end using Ember.js to consume Snipe-IT's API. It will augment the ability for members of the site to borrow home and gardening tools from each other.
+The project aims to develop a new front end using Ember.js to consume Homebox's API. It will augment the ability for members of the site to borrow home and gardening tools from each other.
 
 ### Mandatory Rules
 
@@ -19,17 +19,17 @@ The project aims to develop a new front end using Ember.js to consume Snipe-IT's
 ### Goals and Objectives:
 
 Build a responsive and user-friendly interface that mimic masonry CSS.
-Efficiently integrate with Snipe-IT's API to manage asset inventories.
+Efficiently integrate with Homebox's API to manage asset inventories.
 Augment the API with additional feature that allows users to borrow inventory from other users
 
 ## Requirements
 
 ### Functional Requirements:
 
-Develop an Ember.js frontend capable of consuming Snipe-IT's API.
+Develop an Ember.js frontend capable of consuming Homebox's API.
 Implement features:
 
-- [ ] User authentication system integrated with Snipe-IT.
+- [ ] User authentication system integrated with Homebox.
 - [ ]check-in/check-out
 - [ ] reporting.
 
@@ -44,12 +44,12 @@ Ensure compatibility across major web browsers.
 ### In-Scope:
 
 Development of a new Ember.js frontend.
-Integration with Snipe-IT's API.
+Integration with Homebox's API.
 UI/UX design improvements.
 
 ### Out-of-Scope:
 
-Modifications to Snipe-IT's backend codebase.
+Modifications to Homebox's backend codebase.
 Mobile app development in this phase.
 
 ## Implementation Plan
@@ -58,7 +58,7 @@ Mobile app development in this phase.
 
 Follow Agile methodology to allow for iterative feedback and improvements.
 Utilize Ember.js best practices and design patterns.
-Use information about the api at api_reference.md or on the web at https://snipe-it.readme.io/reference/api-overview
+Use information about the api at api_reference.md
 Use the mock api convention in convention.md to
 
 ### Deployment Strategy:
@@ -86,9 +86,9 @@ Prototype design sketches and wireframes.
 ### process1: Create necessary files
 - [x] create an front end authorization to the api at localhost:3100
 - [x] store session data in ember-simple-auth session object
-- [ ] create a serializer for user "self" response
-- [ ] ask API for data on user and store it in ember data
-- [ ] store user data in model
+- [x] create a serializer for user "self" api response
+- [x] ask API for data on user and store it in ember data
+- [ ] use authenticate @action to store user data in model
 - [ ] create a serializer for item model
 - [ ] create a route to /items
 - [ ] create a template to display items
@@ -97,5 +97,4 @@ Prototype design sketches and wireframes.
 #### process2: Follow-up
 
 ##### sub1: Refactor UserController.php
-
 - [ ] Refactor the code.

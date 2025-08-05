@@ -95,7 +95,7 @@
 ### 11.1 Serializing API Output
 
 - **Custom Serialization:**
-  - If the Snipe-IT API does not naturally conform to the JSON API specification, use Ember Data's `Serializer` to transform the API response into an Ember-compatible format.
+  - If the Homebox API does not naturally conform to the JSON API specification, use Ember Data's `Serializer` to transform the API response into an Ember-compatible format.
 
 #### Custom Serializer Conventions
 
@@ -157,7 +157,7 @@ export default class ApplicationSerializer extends JSONAPISerializer {
   - Ensure that the API output adheres to the JSON API specification, which is the default expectation for Ember Data. This includes properly formatted `type`, `id`, `attributes`, and `relationships`.
 
 - **Custom Serialization:**
-  - If the Snipe-IT API does not naturally conform to the JSON API specification, use Ember Data's `Serializer` to transform the API response into an Ember-compatible format.
+  - If the Homebox API does not naturally conform to the JSON API specification, use Ember Data's `Serializer` to transform the API response into an Ember-compatible format.
 
 #### Custom Serializer Conventions
 
@@ -234,7 +234,7 @@ For development and testing purposes, Aider will use static JSON files to simula
     ```
 
 - **Data Preparation:**
-  - Create realistic JSON files to mimic the API outputs expected from the Snipe-IT API.
+  - Create realistic JSON files to mimic the API outputs expected from the Homebox API.
 
 - **Accessing Mock Data:**
   - Use relative URL paths to fetch data in the application. Example:
