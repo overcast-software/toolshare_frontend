@@ -1,6 +1,9 @@
 import JSONAPISerializer from '@ember-data/serializer/json-api';
 
 export default class UserSerializer extends JSONAPISerializer {
+  keyForAttribute(attr) {
+    return attr;
+  }
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
     const transformedPayload = {
       data: {

@@ -5,6 +5,7 @@ import { tracked } from '@glimmer/tracking';
 
 export default class LoginController extends Controller {
   @service session;
+  @service userSession;
   @tracked errorMessage;
   @tracked username;
   @tracked password;
@@ -13,7 +14,8 @@ export default class LoginController extends Controller {
   async authenticate(event) {
     event.preventDefault();
     try {
-      await this.session.authenticate('authenticator:custom', this.username, this.password);
+      await this.session.authenticate('authenticator:custom', this.username, this.password)
+      this.userSession.loadCurrentUser()
       // Redirect or perform actions on successful login
     } catch (error) {
       this.errorMessage = error.message || 'Authentication failed';

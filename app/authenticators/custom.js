@@ -1,12 +1,13 @@
 import Base from 'ember-simple-auth/authenticators/base';
 import { service } from '@ember/service';
+import config from 'tool-share/config/environment';
 
 export default class CustomAuthenticator extends Base {
   @service store;
   @service session;
 
   async authenticate(username, password) {
-    const response = await fetch('http://localhost:3100/api/v1/users/login', {
+    const response = await fetch(`${config.APP.apiHost}/api/v1/users/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
