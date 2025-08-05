@@ -84,12 +84,15 @@ Prototype design sketches and wireframes.
 ## Process
 
 ### process1: Create necessary files
+- [x] create an front end authorization to the api at localhost:3100
+- [x] store session data in ember-simple-auth session object
+- [ ] create a serializer for user "self" response
+- [ ] ask API for data on user and store it in ember data
+- [ ] store user data in model
+- [ ] create a serializer for item model
+- [ ] create a route to /items
+- [ ] create a template to display items
 
-- [ ] create "hardware" page at root path
-  - [ ] create hardware model using cli
-  - [ ] create stubbed api response in /api/ assets/hardware.json
-  - [ ] create route to hardware
-  - [ ] create serializer for hardware response
 
 #### process2: Follow-up
 
