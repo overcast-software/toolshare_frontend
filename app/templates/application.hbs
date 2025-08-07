@@ -3,15 +3,16 @@
 {{#if this.session.isAuthenticated}}
   <header class="app-header">
     <div class="user-info">
-      {{#if this.session.data.authenticated.user}}
-        <span class="user-name">Welcome, {{this.session.data.authenticated.user.name}}</span>
-      {{/if}}
       <button type="button" class="logout-button" {{on "click" this.logout}}>
         Logout
       </button>
     </div>
     <h1>ToolShare - Hardware Inventory</h1>
     <p>Borrow and share tools with your community</p>
+    {{!-- Add the link to the items route --}}
+    <nav>
+      <LinkTo @route="items">items</LinkTo>
+    </nav>
   </header>
 
   <main class="app-main">

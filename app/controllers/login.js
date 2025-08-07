@@ -13,13 +13,10 @@ export default class LoginController extends Controller {
   @action
   async authenticate(event) {
     event.preventDefault();
-    try {
-      await this.session.authenticate('authenticator:custom', this.username, this.password)
-      this.userSession.loadCurrentUser()
-      // Redirect or perform actions on successful login
-    } catch (error) {
-      this.errorMessage = error.message || 'Authentication failed';
-    }
+    await this.session.authenticate('authenticator:custom', this.username, this.password);
+    // once we have the tokens, we can look up the user details
+    await this.userSession.loadCurrentUser();
+    // Redirect or perform actions on successful login
   }
 
   @action

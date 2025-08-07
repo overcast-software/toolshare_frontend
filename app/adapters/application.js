@@ -1,19 +1,23 @@
 import RESTAdapter from '@ember-data/adapter/rest';
 import { computed } from '@ember/object';
 import { service } from '@ember/service';
+import config from 'tool-share/config/environment';
 
 
 export default class ApplicationAdapter extends RESTAdapter {
   @service session;
-  host = 'locahost:3100';
-  namespace = 'api/assets';
-  @computed('session.data.authenticated.{access_token,token}', 'session.isAuthenticated')
+  host = config.APP.apiHost;
+  namespace = 'api/v1';
+  @computed('session.data.authenticated.token', 'session.isAuthenticated')
   get headers() {
     let headers = {};
+    let fun = this.session.get('isAuthenticated')
+    console.log(fun)
+
     if (this.session.isAuthenticated) {
-      // OAuth 2
       headers['Authorization'] = this.session.data.authenticated.token
     }
+
     return headers;
   }
 }

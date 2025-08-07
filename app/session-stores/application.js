@@ -1,3 +1,4 @@
-import AdaptiveStore from 'ember-simple-auth/session-stores/adaptive';
+// app/session-stores/application.js
+import Cookie from 'ember-simple-auth/session-stores/cookie';
 
-export default class SessionStore extends AdaptiveStore {}
+export default class ApplicationSessionStore extends Cookie {}
