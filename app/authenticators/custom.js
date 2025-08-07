@@ -26,23 +26,21 @@ export default class CustomAuthenticator extends Base {
     }
 
     const data = await response.json();
-    
-    // Store session data
-    return {
+    const sessionData = {
       attachment_token: data.attachment_token,
       token: data.token,
       expires_at: data.expiresAt,
     };
+
+    return sessionData;
   }
 
   async restore(data) {
-    if (data.token) {
-      return data;
-    }
-    throw new Error('No valid session data');
+    console.log(data)
+    return data
   }
 
-  async invalidate() {
+  invalidate() {
     // Optionally call logout endpoint
     return Promise.resolve();
   }

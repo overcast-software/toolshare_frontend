@@ -6,5 +6,5 @@ export default class ApplicationController extends Controller {
   @service session;
   @action
   logout(){}
-
+  
 }

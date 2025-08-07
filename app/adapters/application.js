@@ -11,8 +11,6 @@ export default class ApplicationAdapter extends RESTAdapter {
   @computed('session.data.authenticated.token', 'session.isAuthenticated')
   get headers() {
     let headers = {};
-    let fun = this.session.get('isAuthenticated')
-    console.log(fun)
 
     if (this.session.isAuthenticated) {
       headers['Authorization'] = this.session.data.authenticated.token
